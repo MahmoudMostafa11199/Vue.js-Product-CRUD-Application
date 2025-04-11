@@ -1,0 +1,54 @@
+@import './base.css';
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+section {
+  padding-block: 24px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 550px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #435c5c;
+  color: white;
+  padding: 12px 20px;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &.delete {
+    background-color: #ac0d0d;
+
+    &:hover {
+      background-color: #d71212;
+    }
+  }
+
+  &:hover {
+    background-color: #2c3b3b;
+  }
+}
