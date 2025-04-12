@@ -78,9 +78,9 @@ export default {
         const res = await fetch(`https://fakestoreapi.com/products/${id}`)
         if (!res.ok) throw new Error('Product not found.')
 
-        const data = await res.json()
+        const text = await res.text()
+        const data = text ? JSON.parse(text) : null
         if (!data) throw new Error('This product is no longer available or has been removed.')
-
         commit('getProduct', data)
       } catch (err) {
         commit('setError', {
